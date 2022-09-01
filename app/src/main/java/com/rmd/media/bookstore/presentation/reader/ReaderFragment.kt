@@ -7,17 +7,17 @@ import android.graphics.Point
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.pdf.PdfRenderer
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.rmd.media.bookstore.R
 import com.rmd.media.bookstore.databinding.FragmentReaderBinding
 import com.rmd.media.bookstore.domain.Document
-import com.rmd.media.bookstore.framework.MajesticViewModelFactory
 import com.rmd.media.bookstore.presentation.IntentUtil
 import com.rmd.media.bookstore.presentation.library.LibraryFragment
-import com.rmd.media.bookstore.presentation.library.LibraryViewModel
 
 class ReaderFragment : Fragment() {
 

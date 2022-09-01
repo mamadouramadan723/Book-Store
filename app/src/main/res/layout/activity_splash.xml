@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".presentation.SplashActivity">
 
-  <ImageView
+  <androidx.appcompat.widget.AppCompatImageView
       android:id="@+id/imageView"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_chainStyle="packed"/>
 
-  <TextView
+  <androidx.appcompat.widget.AppCompatTextView
       android:id="@+id/textView"
       android:layout_width="0dp"
       android:layout_height="wrap_content"

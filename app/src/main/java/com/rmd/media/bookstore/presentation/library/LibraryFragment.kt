@@ -13,8 +13,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.rmd.media.bookstore.R
 import com.rmd.media.bookstore.databinding.FragmentLibraryBinding
-import com.rmd.media.bookstore.databinding.FragmentReaderBinding
-import com.rmd.media.bookstore.framework.MajesticViewModelFactory
 import com.rmd.media.bookstore.presentation.IntentUtil.createOpenIntent
 import com.rmd.media.bookstore.presentation.MainActivityDelegate
 

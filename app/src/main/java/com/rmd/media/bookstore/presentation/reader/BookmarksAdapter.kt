@@ -3,7 +3,6 @@ package com.rmd.media.bookstore.presentation.reader
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.rmd.media.bookstore.R
 import com.rmd.media.bookstore.databinding.ItemBookmarkBinding
