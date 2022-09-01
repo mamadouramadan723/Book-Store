@@ -1,24 +1,28 @@
 package com.rmd.media.bookstore.presentation
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.Window
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.rmd.media.bookstore.R
 
-@SuppressLint("CustomSplashScreen")
+
 class SplashActivity : AppCompatActivity() {
 
+
+
   override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState);
+    super.onCreate(savedInstanceState)
 
     makeFullScreen()
 
     setContentView(R.layout.activity_splash)
+
 
 
     val SPLASH_SCREEN = 400
@@ -27,24 +31,33 @@ class SplashActivity : AppCompatActivity() {
       val intent = Intent(this, MainActivity::class.java)
       startActivity(intent)
 
+
       // Animate the loading of new activity
       overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
-      finish()
-    }, SPLASH_SCREEN.toLong())
+
+
+      //finish()
+    }, 2000)
     // Using a handler to delay loading the MainActivity
 
   }
 
   private fun makeFullScreen() {
+    Log.e("------------treztre", "+++++++++++++treztre")
+
+
     // Remove Title
     requestWindowFeature(Window.FEATURE_NO_TITLE)
 
+
     // Make Fullscreen
-    window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+    window.setFlags(
+      WindowManager.LayoutParams.FLAG_FULLSCREEN,
         WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
+
     // Hide the toolbar
-    supportActionBar?.hide()
+    //supportActionBar?.hide()
   }
 }
