@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.MainActivity">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/pageIv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="88dp"
+        android:layout_weight="1"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:orientation="vertical"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="88dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pagesTv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:textColor="@android:color/white"
+                tools:text="Page: 1 / 12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:text="@string/bookmarks"
+                android:textColor="@android:color/white"
+                app:drawableEndCompat="@drawable/ic_arrow_up" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tabBookmark"
+                style="@style/Widget.MajesticReader.Tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:icon="@drawable/ic_bookmark"
+                android:text="@string/bookmark"
+                app:drawableTopCompat="@drawable/ic_bookmark" />
+
+            <TextView
+                android:id="@+id/tabLibrary"
+                style="@style/Widget.MajesticReader.Tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/menu_library"
+                app:drawableTopCompat="@drawable/ic_library" />
+
+            <TextView
+                android:id="@+id/tabPreviousPage"
+                style="@style/Widget.MajesticReader.Tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/previous"
+                app:drawableTopCompat="@drawable/ic_previous_page" />
+
+            <TextView
+                android:id="@+id/tabNextPage"
+                style="@style/Widget.MajesticReader.Tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/next"
+                app:drawableTopCompat="@drawable/ic_next_page" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bookRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_bookmark" />
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
